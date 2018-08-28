@@ -42,16 +42,6 @@ class TalkListFragment : Fragment() {
         recyclerView.adapter = myAdapter
     }
 
-    override fun onStart() {
-        super.onStart()
-        myAdapter.startListening()
-    }
-
-    override fun onStop() {
-        super.onStop()
-        myAdapter.stopListening()
-    }
-
 
     companion object {
 
