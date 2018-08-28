@@ -19,6 +19,9 @@ class TalkRecyclerAdapter(options: FirestoreRecyclerOptions<Talk>) : FirestoreRe
     override fun onBindViewHolder(holder: TalkHolder, position: Int, model: Talk) {
         holder.title?.text = model.title
         holder.speaker?.text = model.speaker
+        holder.itemView.setOnClickListener {
+
+        }
     }
 }
 
