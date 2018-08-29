@@ -7,16 +7,6 @@ import android.view.View
 import android.view.ViewGroup
 import com.github.gdgitalia.gdgeventtracker.R
 
-
-/**
- * A simple [Fragment] subclass.
- * Activities that contain this fragment must implement the
- * [AboutFragment.OnFragmentInteractionListener] interface
- * to handle interaction events.
- * Use the [AboutFragment.newInstance] factory method to
- * create an instance of this fragment.
- *
- */
 class AboutFragment : Fragment() {
 
     override fun onCreateView(

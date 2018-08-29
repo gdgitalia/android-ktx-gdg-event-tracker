@@ -13,22 +13,13 @@ import com.github.gdgitalia.gdgeventtracker.navigator.TalkItemNavigator
 import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.android.synthetic.main.fragment_talk_list.*
 
-/**
- * A simple [Fragment] subclass.
- * Activities that contain this fragment must implement the
- * [TalkListFragment.OnFragmentInteractionListener] interface
- * to handle interaction events.
- * Use the [TalkListFragment.newInstance] factory method to
- * create an instance of this fragment.
- *
- */
 class TalkListFragment : Fragment() {
-    val query = FirebaseFirestore.getInstance().collection(TALKS_KEY).orderBy(DATE_FIELD)
-    val firestoreRecyclerOptions by lazy {
+    private val query = FirebaseFirestore.getInstance().collection(TALKS_KEY).orderBy(DATE_FIELD)
+    private val firestoreRecyclerOptions by lazy {
         FirestoreRecyclerOptions.Builder<Talk>().setLifecycleOwner(this)
             .setQuery(query, Talk::class.java).build()
     }
-    val myAdapter by lazy { TalkRecyclerAdapter(firestoreRecyclerOptions, activity as TalkItemNavigator) }
+    private val myAdapter by lazy { TalkRecyclerAdapter(firestoreRecyclerOptions, activity as TalkItemNavigator) }
 
 
     override fun onCreateView(
