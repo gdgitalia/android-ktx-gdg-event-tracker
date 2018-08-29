@@ -51,7 +51,7 @@ class MainActivity : AppCompatActivity(), TalkItemNavigator {
 
     private fun changeFragment(fragment: Fragment) {
         supportFragmentManager.beginTransaction()
-            .replace(R.id.container, fragment)
+            .replace(R.id.fragmentContainer, fragment)
             .commit()
     }
 
