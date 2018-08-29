@@ -12,5 +12,7 @@ data class Talk(
         val language: String = "",
         val country: String = "",
         val level: Long = 0,
-        val speaker: String = ""
+        val speaker: String = "",
+        val pic: String ="",
+        val location: String = ""
 )

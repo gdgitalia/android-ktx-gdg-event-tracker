@@ -9,12 +9,12 @@
 
     <ImageView
         android:id="@+id/picImageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginLeft="16dp"
         app:srcCompat="@drawable/common_google_signin_btn_icon_dark" />
 
     <TextView
@@ -68,11 +68,24 @@
         style="@style/Widget.AppCompat.RatingBar.Small"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
         android:isIndicator="true"
         android:numStars="3"
         android:stepSize="1"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="@id/speakerTextView"
-        app:layout_constraintTop_toBottomOf="@id/speakerTextView" />
+        app:layout_constraintTop_toBottomOf="@+id/speakerTextView"
+        tools:rating="3" />
 
+    <ImageView
+        android:id="@+id/countryImageView"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/levelRatingBar"
+        app:layout_constraintStart_toEndOf="@+id/levelRatingBar"
+        app:layout_constraintTop_toTopOf="@+id/levelRatingBar"
+        tools:src="@tools:sample/avatars" />
 
 </android.support.constraint.ConstraintLayout>
