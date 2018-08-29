@@ -3,6 +3,15 @@
     <string name="title_talk_list">Lista Talk</string>
     <string name="title_about">About</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="developers">Sviluppatori: </string>
+    <string name="developers_name" translatable="false">Giuseppe Filograno,
+        Valentina Carrirolo,
+        Omar Miatello,
+        Anna Labellarte</string>
+
+    <string name="git_repository_url_title">Git Repository URL:</string>
+    <string name="git_repository_url" translatable="false">https://github.com/gdgitalia/android-ktx-gdg-event-tracker</string>
+
+    <string name="speacial_thanks_title">Ringraziamenti speciali:</string>
+    <string name="special_thanks" translatable="false">GDG Bari &amp; Roberto Orgiu</string>
 </resources>
