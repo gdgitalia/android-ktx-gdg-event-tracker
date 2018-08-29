@@ -1,119 +1,135 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:padding="16dp"
-    android:orientation="vertical"
-    tools:context=".view.TalkDetailActivity"
-    tools:layout_editor_absoluteY="81dp">
+    android:layout_height="match_parent">
 
-    <!-- Talk -->
-
-    <TextView
-        android:id="@+id/talkTitleTextView"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="titolo"
-        android:textAppearance="@style/TextAppearance.AppCompat.Title"
-        tools:layout_editor_absoluteY="16dp" />
-
-    <TextView
-        android:id="@+id/talkAbstractTextView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="abstract"
-        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
-        tools:layout_editor_absoluteY="16dp" />
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp"
+        tools:context=".view.TalkDetailActivity"
+        tools:layout_editor_absoluteY="81dp">
 
 
-    <TextView
-        android:id="@+id/talkTechnologyTextView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="technology"
-        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
-        tools:layout_editor_absoluteY="16dp" />
+        <!-- Talk -->
 
-    <TextView
-        android:id="@+id/talkTypeTextView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="type"
-        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
-        tools:layout_editor_absoluteY="16dp" />
+        <TextView
+            android:id="@+id/talkTitleTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="titolo"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title" />
 
-    <TextView
-        android:id="@+id/talkDateTextView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="date"
-        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
-        tools:layout_editor_absoluteY="16dp" />
-
-    <TextView
-        android:id="@+id/talkHashtagTextView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="hashtag"
-        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
-        tools:layout_editor_absoluteY="16dp" />
-
-    <TextView
-        android:id="@+id/talkLanguageTextView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="language"
-        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
-        tools:layout_editor_absoluteY="16dp" />
-
-    <TextView
-        android:id="@+id/talkCountryTextView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="country"
-        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
-        tools:layout_editor_absoluteY="16dp" />
-    <TextView
-        android:id="@+id/talkLevelTextView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="level"
-        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
-        tools:layout_editor_absoluteY="16dp" />
-
-    <TextView
-        android:id="@+id/talkSpeakerTextView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="speaker"
-        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
-        tools:layout_editor_absoluteY="16dp" />
-
-    <!--level-->
-    <!--speaker-->
-    <!--pic-->
-    <!--location-->
+        <TextView
+            android:id="@+id/talkAbstractTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="abstract"
+            android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
 
 
-    <!-- Speaker -->
-    <TextView
-        android:id="@+id/speakerNameTextView"
-        android:layout_width="304dp"
-        android:layout_height="wrap_content"
-        android:text="speaker" />
-    <!--bio-->
-    <!--community-->
-    <!--company-->
-    <!--name-->
-    <!--pic-->
-    <!--type-->
+        <TextView
+            android:id="@+id/talkTechnologyTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="technology"
+            android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
 
-    <ImageView
-        android:id="@+id/picImageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/common_google_signin_btn_icon_dark" />
+        <TextView
+            android:id="@+id/talkTypeTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="type"
+            android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
 
-</LinearLayout>
+        <TextView
+            android:id="@+id/talkDateTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="date"
+            android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
+
+        <TextView
+            android:id="@+id/talkHashtagTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="hashtag"
+            android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
+
+        <TextView
+            android:id="@+id/talkLanguageTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="language"
+            android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
+
+        <TextView
+            android:id="@+id/talkCountryTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="country"
+            android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
+
+        <TextView
+            android:id="@+id/talkLevelTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="level"
+            android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
+
+        <ImageView
+            android:id="@+id/talkPicImageView"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            tools:src="@drawable/common_google_signin_btn_icon_dark" />
+
+        <TextView
+            android:id="@+id/talkLocationTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="location"
+            android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
+
+
+        <!-- Speaker -->
+        <TextView
+            android:id="@+id/speakerNameTextView"
+            android:layout_width="304dp"
+            android:layout_height="wrap_content"
+            android:text="speakerName" />
+
+        <TextView
+            android:id="@+id/speakerBioTextView"
+            android:layout_width="304dp"
+            android:layout_height="wrap_content"
+            android:text="speakerBio" />
+
+        <TextView
+            android:id="@+id/speakerCommunityTextView"
+            android:layout_width="304dp"
+            android:layout_height="wrap_content"
+            android:text="speakerCommunity" />
+
+        <TextView
+            android:id="@+id/speakerCompanyTextView"
+            android:layout_width="304dp"
+            android:layout_height="wrap_content"
+            android:text="speakerCompany" />
+
+        <TextView
+            android:id="@+id/speakerTypeTextView"
+            android:layout_width="304dp"
+            android:layout_height="wrap_content"
+            android:text="speakerType" />
+
+        <ImageView
+            android:id="@+id/speakerPicImageView"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            tools:src="@drawable/common_google_signin_btn_icon_dark" />
+
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>
