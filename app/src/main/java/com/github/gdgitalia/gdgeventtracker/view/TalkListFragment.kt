@@ -1,4 +1,4 @@
-package com.github.gdgitalia.gdgeventtracker
+package com.github.gdgitalia.gdgeventtracker.view
 
 import android.os.Bundle
 import android.support.v4.app.Fragment
@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.firebase.ui.firestore.FirestoreRecyclerOptions
+import com.github.gdgitalia.gdgeventtracker.R
 import com.github.gdgitalia.gdgeventtracker.adapter.TalkRecyclerAdapter
 import com.github.gdgitalia.gdgeventtracker.model.Talk
 import com.github.gdgitalia.gdgeventtracker.navigator.TalkItemNavigator

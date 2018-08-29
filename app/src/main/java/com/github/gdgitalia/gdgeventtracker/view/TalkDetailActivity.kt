@@ -1,7 +1,8 @@
-package com.github.gdgitalia.gdgeventtracker
+package com.github.gdgitalia.gdgeventtracker.view
 
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
+import com.github.gdgitalia.gdgeventtracker.R
 import com.github.gdgitalia.gdgeventtracker.model.Talk
 import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.android.synthetic.main.activity_talk_detail.*
