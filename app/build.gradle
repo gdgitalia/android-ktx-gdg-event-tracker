@@ -32,6 +32,8 @@ dependencies {
 
     implementation 'com.google.firebase:firebase-core:16.0.3'
     implementation 'com.google.firebase:firebase-firestore:15.0.0'
+    implementation 'com.google.firebase:firebase-messaging:17.3.0'
+    implementation 'com.google.firebase:firebase-inappmessaging-display:17.0.1'
 
     // DO NOT UPDATE - ISSUE: https://stackoverflow.com/questions/50524672/build-fails-with-program-type-already-present-android-arch-core-util-function
     implementation 'com.firebaseui:firebase-ui-firestore:3.3.1' // FirebaseUI for Cloud Firestore
