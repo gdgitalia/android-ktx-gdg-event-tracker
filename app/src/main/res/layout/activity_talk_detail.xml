@@ -1,36 +1,119 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="16dp"
+    android:orientation="vertical"
     tools:context=".view.TalkDetailActivity"
     tools:layout_editor_absoluteY="81dp">
+
+    <!-- Talk -->
+
+    <TextView
+        android:id="@+id/talkTitleTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="titolo"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <TextView
+        android:id="@+id/talkAbstractTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="abstract"
+        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+        tools:layout_editor_absoluteY="16dp" />
+
+
+    <TextView
+        android:id="@+id/talkTechnologyTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="technology"
+        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <TextView
+        android:id="@+id/talkTypeTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="type"
+        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <TextView
+        android:id="@+id/talkDateTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="date"
+        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <TextView
+        android:id="@+id/talkHashtagTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="hashtag"
+        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <TextView
+        android:id="@+id/talkLanguageTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="language"
+        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <TextView
+        android:id="@+id/talkCountryTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="country"
+        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+        tools:layout_editor_absoluteY="16dp" />
+    <TextView
+        android:id="@+id/talkLevelTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="level"
+        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <TextView
+        android:id="@+id/talkSpeakerTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="speaker"
+        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <!--level-->
+    <!--speaker-->
+    <!--pic-->
+    <!--location-->
+
+
+    <!-- Speaker -->
+    <TextView
+        android:id="@+id/speakerNameTextView"
+        android:layout_width="304dp"
+        android:layout_height="wrap_content"
+        android:text="speaker" />
+    <!--bio-->
+    <!--community-->
+    <!--company-->
+    <!--name-->
+    <!--pic-->
+    <!--type-->
 
     <ImageView
         android:id="@+id/picImageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/common_google_signin_btn_icon_dark"
-        tools:layout_editor_absoluteX="31dp"
-        tools:layout_editor_absoluteY="312dp" />
+        app:srcCompat="@drawable/common_google_signin_btn_icon_dark" />
 
-    <TextView
-        android:id="@+id/titleTextView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:text="titolo"
-        android:textAppearance="@style/TextAppearance.AppCompat.Title"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="16dp" />
-
-    <TextView
-        android:id="@+id/speakerTextView"
-        android:layout_width="304dp"
-        android:layout_height="wrap_content"
-        android:text="speaker"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="43dp" />
-</android.support.constraint.ConstraintLayout>
+</LinearLayout>
