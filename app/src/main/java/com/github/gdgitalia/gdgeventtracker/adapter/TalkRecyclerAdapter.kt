@@ -26,11 +26,14 @@ class TalkRecyclerAdapter(options: FirestoreRecyclerOptions<Talk>, val navigator
             val snapshot = snapshots.getSnapshot(position)
             navigator.openTaskDetail(snapshot.id)
         }
+        holder.level?.setIsIndicator(false)
+        holder.level?.numStars = 2
     }
 }
 
 class TalkHolder(itemView: View?) : RecyclerView.ViewHolder(itemView) {
     val title = itemView?.titleTextView
     val speaker = itemView?.speakerTextView
+    val level = itemView?.levelRatingBar
 
 }
