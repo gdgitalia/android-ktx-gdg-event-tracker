@@ -8,9 +8,12 @@ import com.firebase.ui.firestore.FirestoreRecyclerAdapter
 import com.firebase.ui.firestore.FirestoreRecyclerOptions
 import com.github.gdgitalia.gdgeventtracker.R
 import com.github.gdgitalia.gdgeventtracker.model.Talk
+import com.github.gdgitalia.gdgeventtracker.navigator.TalkItemNavigator
 import kotlinx.android.synthetic.main.item_talk.view.*
 
-class TalkRecyclerAdapter(options: FirestoreRecyclerOptions<Talk>) : FirestoreRecyclerAdapter<Talk, TalkHolder>(options) {
+
+
+class TalkRecyclerAdapter(options: FirestoreRecyclerOptions<Talk>, val navigator: TalkItemNavigator) : FirestoreRecyclerAdapter<Talk, TalkHolder>(options) {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TalkHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.item_talk, parent, false)
         return TalkHolder(view)
@@ -20,7 +23,8 @@ class TalkRecyclerAdapter(options: FirestoreRecyclerOptions<Talk>) : FirestoreRe
         holder.title?.text = model.title
         holder.speaker?.text = model.speaker
         holder.itemView.setOnClickListener {
-
+            val snapshot = snapshots.getSnapshot(position)
+            navigator.openTaskDetail(snapshot.id)
         }
     }
 }

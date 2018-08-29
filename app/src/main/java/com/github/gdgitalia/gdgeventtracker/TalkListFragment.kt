@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import com.firebase.ui.firestore.FirestoreRecyclerOptions
 import com.github.gdgitalia.gdgeventtracker.adapter.TalkRecyclerAdapter
 import com.github.gdgitalia.gdgeventtracker.model.Talk
+import com.github.gdgitalia.gdgeventtracker.navigator.TalkItemNavigator
 import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.android.synthetic.main.fragment_talk_list.*
 
@@ -26,7 +27,7 @@ class TalkListFragment : Fragment() {
         FirestoreRecyclerOptions.Builder<Talk>().setLifecycleOwner(this)
             .setQuery(query, Talk::class.java).build()
     }
-    val myAdapter by lazy { TalkRecyclerAdapter(firestoreRecyclerOptions) }
+    val myAdapter by lazy { TalkRecyclerAdapter(firestoreRecyclerOptions, activity as TalkItemNavigator) }
 
 
     override fun onCreateView(
