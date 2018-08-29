@@ -14,6 +14,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginLeft="16dp"
         app:srcCompat="@drawable/common_google_signin_btn_icon_dark" />
 
     <TextView
@@ -63,10 +64,10 @@
         app:layout_constraintTop_toBottomOf="@id/titleTextView" />
 
     <RatingBar
-
         android:id="@+id/levelRatingBar"
         style="@style/Widget.AppCompat.RatingBar.Small"
         android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:isIndicator="true"
         android:numStars="3"
         android:stepSize="1"

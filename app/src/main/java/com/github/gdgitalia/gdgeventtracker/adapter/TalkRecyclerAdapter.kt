@@ -27,7 +27,7 @@ class TalkRecyclerAdapter(options: FirestoreRecyclerOptions<Talk>, val navigator
             navigator.openTaskDetail(snapshot.id)
         }
         holder.level?.setIsIndicator(false)
-        holder.level?.numStars = 2
+
     }
 }
 
