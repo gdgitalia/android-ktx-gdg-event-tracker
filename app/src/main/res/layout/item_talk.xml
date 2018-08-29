@@ -23,7 +23,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="8dp"
-        android:text=" Lun 18 Ago, 12:30"
+        android:hint=" Lun 18 Ago, 12:30"
         app:layout_constraintLeft_toRightOf="@id/picImageView"
         app:layout_constraintTop_toTopOf="parent"
         />
@@ -59,7 +59,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
-        android:text="by Orgiu Orgiu"
+        android:hint="by Orgiu Orgiu"
         app:layout_constraintLeft_toRightOf="@id/picImageView"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/titleTextView" />

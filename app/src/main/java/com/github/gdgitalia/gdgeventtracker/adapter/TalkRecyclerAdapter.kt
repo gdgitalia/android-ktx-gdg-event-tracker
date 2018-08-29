@@ -4,7 +4,6 @@ import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.bumptech.glide.Glide
 import com.firebase.ui.firestore.FirestoreRecyclerAdapter
 import com.firebase.ui.firestore.FirestoreRecyclerOptions
 import com.github.gdgitalia.gdgeventtracker.R
@@ -12,11 +11,10 @@ import com.github.gdgitalia.gdgeventtracker.model.Talk
 import com.github.gdgitalia.gdgeventtracker.navigator.TalkItemNavigator
 import kotlinx.android.synthetic.main.item_talk.view.*
 import java.text.SimpleDateFormat
-import java.time.format.DateTimeFormatter
 import java.util.*
 
 
-class TalkRecyclerAdapter(options: FirestoreRecyclerOptions<Talk>, val navigator: TalkItemNavigator) : FirestoreRecyclerAdapter<Talk, TalkHolder>(options) {
+class TalkRecyclerAdapter(options: FirestoreRecyclerOptions<Talk>, private val navigator: TalkItemNavigator) : FirestoreRecyclerAdapter<Talk, TalkHolder>(options) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TalkHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.item_talk, parent, false)
