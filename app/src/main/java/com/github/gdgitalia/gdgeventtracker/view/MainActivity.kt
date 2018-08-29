@@ -30,7 +30,9 @@ class MainActivity : AppCompatActivity(), TalkItemNavigator {
         setContentView(R.layout.activity_main)
 
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener)
-        showTaskList()
+        if (savedInstanceState == null) {
+            showTaskList()
+        }
     }
 
     override fun openTaskDetail(talkId: String) {
