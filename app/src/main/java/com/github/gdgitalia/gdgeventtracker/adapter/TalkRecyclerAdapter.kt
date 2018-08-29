@@ -11,7 +11,9 @@ import com.github.gdgitalia.gdgeventtracker.R
 import com.github.gdgitalia.gdgeventtracker.model.Talk
 import com.github.gdgitalia.gdgeventtracker.navigator.TalkItemNavigator
 import kotlinx.android.synthetic.main.item_talk.view.*
-
+import java.text.SimpleDateFormat
+import java.time.format.DateTimeFormatter
+import java.util.*
 
 
 class TalkRecyclerAdapter(options: FirestoreRecyclerOptions<Talk>, val navigator: TalkItemNavigator) : FirestoreRecyclerAdapter<Talk, TalkHolder>(options) {
@@ -25,10 +27,15 @@ class TalkRecyclerAdapter(options: FirestoreRecyclerOptions<Talk>, val navigator
         holder.title.text = model.title
         holder.speaker.text = model.speakerName
         holder.level.rating = model.level.toFloat()
+        val sdf= SimpleDateFormat("EEE d MMM - HH:mm", Locale.getDefault())
+        holder.date.text = sdf.format(model.date)
+
         holder.itemView.setOnClickListener {
             val snapshot = snapshots.getSnapshot(position)
             navigator.openTaskDetail(snapshot.id)
         }
+
+        holder.location.text = model.location
         holder.level.setIsIndicator(false)
         val countryPath = "https://raw.githubusercontent.com/madebybowtie/FlagKit/master/Assets/PNG/${model.country}.png"
         Glide.with(holder.itemView.context).load(countryPath).into(holder.country)
@@ -42,6 +49,7 @@ class TalkHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
     val level = itemView.levelRatingBar
     val pic = itemView.picImageView
     val country = itemView.countryImageView
+    val date = itemView.dateTextView
     val location = itemView.locationTextView
 
 }
