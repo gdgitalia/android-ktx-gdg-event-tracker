@@ -5,7 +5,6 @@ import android.support.v7.app.AppCompatActivity
 import com.github.gdgitalia.gdgeventtracker.R
 import com.github.gdgitalia.gdgeventtracker.model.Talk
 import com.google.firebase.firestore.FirebaseFirestore
-import kotlinx.android.synthetic.main.activity_talk_detail.*
 
 class TalkDetailActivity : AppCompatActivity() {
 
@@ -26,8 +25,8 @@ class TalkDetailActivity : AppCompatActivity() {
 
     private fun populateActivity(talk: Talk?) {
         talk?.apply {
-            titleTextView.text = title
-            speakerTextView.text = speaker
+//            titleTextView.text = title
+//            speakerTextView.text = speaker
         }
 
     }

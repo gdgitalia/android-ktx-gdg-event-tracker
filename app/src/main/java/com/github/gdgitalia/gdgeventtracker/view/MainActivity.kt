@@ -3,6 +3,7 @@ package com.github.gdgitalia.gdgeventtracker.view
 import android.content.Intent
 import android.os.Bundle
 import android.support.design.widget.BottomNavigationView
+import android.support.v4.app.Fragment
 import android.support.v7.app.AppCompatActivity
 import com.github.gdgitalia.gdgeventtracker.R
 import com.github.gdgitalia.gdgeventtracker.navigator.TalkItemNavigator
@@ -11,21 +12,22 @@ import kotlinx.android.synthetic.main.activity_main.*
 const val TALK_ID_KEY = "TALK_ID"
 
 class MainActivity : AppCompatActivity(), TalkItemNavigator {
-    private val mOnNavigationItemSelectedListener = BottomNavigationView.OnNavigationItemSelectedListener { item ->
-        when (item.itemId) {
-            R.id.navigation_list -> {
-                showTaskList()
-                item.isChecked = true
-                true
+    private val mOnNavigationItemSelectedListener =
+        BottomNavigationView.OnNavigationItemSelectedListener { item ->
+            when (item.itemId) {
+                R.id.navigation_list -> {
+                    showTaskList()
+                    item.isChecked = true
+                    true
+                }
+                R.id.navigation_about -> {
+                    showAbout()
+                    item.isChecked = true
+                    true
+                }
             }
-            R.id.navigation_about -> {
-                showAbout()
-                item.isChecked = true
-                true
-            }
+            false
         }
-        false
-    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -44,14 +46,16 @@ class MainActivity : AppCompatActivity(), TalkItemNavigator {
     }
 
     private fun showTaskList() {
-        val transaction = supportFragmentManager.beginTransaction()
-        transaction.replace(R.id.container, TalkListFragment())
-        transaction.commit()
+        changeFragment(TalkListFragment())
+    }
+
+    private fun changeFragment(fragment: Fragment) {
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.container, fragment)
+            .commit()
     }
 
     private fun showAbout() {
-        val transaction = supportFragmentManager.beginTransaction()
-        transaction.replace(R.id.container, AboutFragment())
-        transaction.commit()
+        changeFragment(AboutFragment())
     }
 }

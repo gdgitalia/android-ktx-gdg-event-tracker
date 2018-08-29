@@ -23,7 +23,7 @@ class TalkRecyclerAdapter(options: FirestoreRecyclerOptions<Talk>, val navigator
 
     override fun onBindViewHolder(holder: TalkHolder, position: Int, model: Talk) {
         holder.title.text = model.title
-        holder.speaker.text = model.speaker
+        holder.speaker.text = model.speakerName
         holder.level.rating = model.level.toFloat()
         holder.itemView.setOnClickListener {
             val snapshot = snapshots.getSnapshot(position)
