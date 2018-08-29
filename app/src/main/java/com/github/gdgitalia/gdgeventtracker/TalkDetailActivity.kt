@@ -2,13 +2,32 @@ package com.github.gdgitalia.gdgeventtracker
 
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
-import android.util.Log
+import com.github.gdgitalia.gdgeventtracker.model.Talk
+import com.google.firebase.firestore.FirebaseFirestore
+import kotlinx.android.synthetic.main.activity_talk_detail.*
 
 class TalkDetailActivity : AppCompatActivity() {
+
+    private val talkId: String by lazy { intent.getStringExtra(TALK_ID_KEY) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_talk_detail)
-        Log.d(TalkDetailActivity::class.java.simpleName, "L'id del talk è: ${intent.getStringExtra(TALK_ID_KEY)}")
+        retrieveTalk()
+    }
+
+    private fun retrieveTalk() {
+        val db = FirebaseFirestore.getInstance()
+        db.collection(TalkListFragment.TALKS_KEY).document(talkId).get().addOnSuccessListener {
+            populateActivity(it.toObject(Talk::class.java))
+        }
+    }
+
+    private fun populateActivity(talk: Talk?) {
+        talk?.apply {
+            titleTextView.text = title
+            speakerTextView.text = speaker
+        }
+
     }
 }
