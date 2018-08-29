@@ -25,16 +25,15 @@
         android:layout_marginTop="8dp"
         android:text=" Lun 18 Ago, 12:30"
         app:layout_constraintLeft_toRightOf="@id/picImageView"
-        app:layout_constraintTop_toTopOf="parent"
-        />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/locationTextView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
-        android:textColor="@color/colorAccent"
         android:layout_marginStart="8dp"
+        android:textColor="@color/colorAccent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/dateTextView"
         app:layout_constraintTop_toTopOf="@+id/dateTextView"

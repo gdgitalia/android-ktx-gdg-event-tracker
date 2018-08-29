@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <LinearLayout
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
@@ -16,120 +18,168 @@
 
         <!-- Talk -->
 
+        <ImageView
+            android:id="@+id/talkPicImageView"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/common_google_signin_btn_icon_dark" />
+
         <TextView
             android:id="@+id/talkTitleTextView"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
             android:text="titolo"
-            android:textAppearance="@style/TextAppearance.AppCompat.Title" />
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            app:layout_constraintBottom_toBottomOf="@+id/talkPicImageView"
+            app:layout_constraintStart_toEndOf="@+id/talkPicImageView"
+            app:layout_constraintTop_toTopOf="@id/talkPicImageView" />
 
         <TextView
             android:id="@+id/talkAbstractTextView"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
             android:text="abstract"
-            android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            app:layout_constraintStart_toStartOf="@+id/talkPicImageView"
+            app:layout_constraintTop_toBottomOf="@+id/talkPicImageView" />
 
-
-        <TextView
-            android:id="@+id/talkTechnologyTextView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="technology"
-            android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
-
-        <TextView
-            android:id="@+id/talkTypeTextView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="type"
-            android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
-
-        <TextView
-            android:id="@+id/talkDateTextView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="date"
-            android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
 
         <TextView
             android:id="@+id/talkHashtagTextView"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="hashtag"
-            android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
+            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+            app:layout_constraintStart_toStartOf="@+id/talkAbstractTextView"
+            app:layout_constraintTop_toBottomOf="@+id/talkAbstractTextView" />
+
+        <TextView
+            android:id="@+id/talkTechnologyTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="technology"
+            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+            app:layout_constraintStart_toStartOf="@+id/talkHashtagTextView"
+            app:layout_constraintTop_toBottomOf="@+id/talkHashtagTextView" />
+
+        <TextView
+            android:id="@+id/talkTypeTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="type"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            app:layout_constraintStart_toStartOf="@+id/talkTechnologyTextView"
+            app:layout_constraintTop_toBottomOf="@+id/talkTechnologyTextView" />
+
+        <TextView
+            android:id="@+id/talkDateTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="date"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            app:layout_constraintStart_toStartOf="@+id/talkTypeTextView"
+            app:layout_constraintTop_toBottomOf="@+id/talkTypeTextView" />
+
 
         <TextView
             android:id="@+id/talkLanguageTextView"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="language"
-            android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            app:layout_constraintStart_toStartOf="@+id/talkDateTextView"
+            app:layout_constraintTop_toBottomOf="@+id/talkDateTextView" />
 
         <TextView
             android:id="@+id/talkCountryTextView"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="country"
-            android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            app:layout_constraintStart_toStartOf="@+id/talkLanguageTextView"
+            app:layout_constraintTop_toBottomOf="@+id/talkLanguageTextView" />
 
         <TextView
             android:id="@+id/talkLevelTextView"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="level"
-            android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
+            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+            app:layout_constraintStart_toStartOf="@+id/talkCountryTextView"
+            app:layout_constraintTop_toBottomOf="@+id/talkCountryTextView" />
 
-        <ImageView
-            android:id="@+id/talkPicImageView"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            tools:src="@drawable/common_google_signin_btn_icon_dark" />
 
         <TextView
             android:id="@+id/talkLocationTextView"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="location"
-            android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textColor="@color/colorAccent"
+            app:layout_constraintStart_toStartOf="@+id/talkLevelTextView"
+            app:layout_constraintTop_toBottomOf="@+id/talkLevelTextView" />
 
 
         <!-- Speaker -->
-        <TextView
-            android:id="@+id/speakerNameTextView"
-            android:layout_width="304dp"
-            android:layout_height="wrap_content"
-            android:text="speakerName" />
-
-        <TextView
-            android:id="@+id/speakerBioTextView"
-            android:layout_width="304dp"
-            android:layout_height="wrap_content"
-            android:text="speakerBio" />
-
-        <TextView
-            android:id="@+id/speakerCommunityTextView"
-            android:layout_width="304dp"
-            android:layout_height="wrap_content"
-            android:text="speakerCommunity" />
-
-        <TextView
-            android:id="@+id/speakerCompanyTextView"
-            android:layout_width="304dp"
-            android:layout_height="wrap_content"
-            android:text="speakerCompany" />
-
-        <TextView
-            android:id="@+id/speakerTypeTextView"
-            android:layout_width="304dp"
-            android:layout_height="wrap_content"
-            android:text="speakerType" />
 
         <ImageView
             android:id="@+id/speakerPicImageView"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="43dp"
+            app:layout_constraintStart_toStartOf="@+id/talkLocationTextView"
+            app:layout_constraintTop_toBottomOf="@+id/talkLocationTextView"
             tools:src="@drawable/common_google_signin_btn_icon_dark" />
 
-    </LinearLayout>
+        <TextView
+            android:id="@+id/speakerNameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="speakerName"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            app:layout_constraintStart_toStartOf="@+id/speakerPicImageView"
+            app:layout_constraintTop_toBottomOf="@+id/speakerPicImageView"/>
+
+        <TextView
+            android:id="@+id/speakerBioTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="speakerBio"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            app:layout_constraintStart_toStartOf="@+id/speakerNameTextView"
+            app:layout_constraintTop_toBottomOf="@+id/speakerNameTextView" />
+
+        <TextView
+            android:id="@+id/speakerCommunityTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="speakerCommunity"
+            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+            app:layout_constraintStart_toStartOf="@+id/speakerBioTextView"
+            app:layout_constraintTop_toBottomOf="@+id/speakerBioTextView" />
+
+        <TextView
+            android:id="@+id/speakerCompanyTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="speakerCompany"
+            app:layout_constraintStart_toStartOf="@+id/speakerCommunityTextView"
+            app:layout_constraintTop_toBottomOf="@+id/speakerCommunityTextView" />
+
+        <TextView
+            android:id="@+id/speakerTypeTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="speakerType"
+            app:layout_constraintStart_toStartOf="@+id/speakerCompanyTextView"
+            app:layout_constraintTop_toBottomOf="@+id/speakerCompanyTextView" />
+
+    </android.support.constraint.ConstraintLayout>
 </android.support.v4.widget.NestedScrollView>
