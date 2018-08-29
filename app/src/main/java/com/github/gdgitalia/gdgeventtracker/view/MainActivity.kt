@@ -15,10 +15,12 @@ class MainActivity : AppCompatActivity(), TalkItemNavigator {
         when (item.itemId) {
             R.id.navigation_list -> {
                 showTaskList()
+                item.isChecked = true
                 true
             }
             R.id.navigation_about -> {
                 showAbout()
+                item.isChecked = true
                 true
             }
         }
